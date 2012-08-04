@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <title>Performance Front end - Giovanni Keppelen</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Giovanni Keppelen" />
+    <meta name="description" content="Light Talk ministrada na QConSP 2012 - Performance Front-end com resultados" />
+
+    <meta property="og:title" content="Performance Front end - Giovanni Keppelen" />
+    <meta property="og:type" content="article"/>
+    <meta property="og:description" content="Light Talk ministrada na QConSP 2012 - Performance Front-end com resultados" />
+    <meta property="og:url" content="http://bygiovanni.com.br/talks/performance"/>
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="Giovanni Keppelen - Front end Engineer no Peixe Urbano, sempre focado em performance web"/>
+
+    <script src="slides.js"></script>
+  </head>
+<body>
+  <section class="slides layout-regular template-io2011">
+
+    <article id="capa">
+      <h3>Performance front-end com resultados</h3>
+    </article>
+    
+    <article id="quemsou"></article>
+
+
+    <article id="peixeurbano" class="bg">
+      <img src="images/peixe_urbano.png" alt="" width="400">
+      <ul>
+        <li>20 milhões de usuários</li>
+        <li>15 milhões de cupons vendidos</li>
+        <li>+ 15 milhões de acessos por mês</li>
+        <li>Presente em 4 países</li>
+      </ul>
+    </article>
+
+
+    <article id="pq" class="bg">
+      Por que performance no Front-end?
+    </article>
+
+    <article id="intopq" class="bg">
+      <ul class="build">
+        <li class="to-build">
+          <p>"Performance golden rule: Optimize front-end performance first, that's where 80/90% of the end-user response time is spent."<br/>
+            <span style="float: right;">Steve Souders</span>
+          </p>
+        </li>
+        <li class="to-build">
+          <p>No Peixe Urbano o tempo de carregamento esta entre 90% a 95% no client side, e por isso estamos sempre atrás das melhores práticas de performance.</p>
+        </li>
+      </ul>
+    </article>
+
+    <article id="pq2" class="bg">
+      <h2>Como é/era</h2>
+      <br><br><br>
+      <ul>
+        <li>Vários e vários padrões</li>
+        <li>Pouca documentação <small>(quase nenhuma)</small></li>
+        <li>Código redundante</li>
+        <li>Crescimento muito acelerado</li>
+        <li>Novos serviços</li>
+      </ul>
+      
+    </article>
+
+    <article id="pq2" class="bg">
+      <h2>Então o que precisamos fazer?</h2>
+      <br><br><br>
+      <ul>
+        <li>OTIMIZAR</li>
+        <li>Definir padrões</li>
+        <li>Reutilizar</li>
+        <li>Documentar</li>
+        <li>Agilizar</li>
+      </ul>
+    </article>
+
+    <article id="PuBt" class="bg">
+      <h2>Peixe Urbano Bootstrap</h2>
+      <h3>Padronização, agilidade, cross browser sem dor de cabeça.</h3>
+    </article>
+
+    <article id="regras" class="bg">
+      <h2>E dentre tantas outras regras, o que fazer??? </h2>
+      <br><br><br>
+      <ul>
+        <li>Habilite GZIP</li>
+        <li>Minifique Javascript</li>
+        <li>Minifique CSS</li>
+        <li>Comprima HTML</li>
+        <li>Não redimensione imagens no HTML</li>
+        <li>Otimize as imagens</li>
+        <li>Pense no formato das imagens</li>
+        <li>Diminua Cookies e headers</li>
+      </ul>
+      <ul>
+        <li>Junte arquivos Javascript</li>
+        <li>Junte arquivos CSS</li>
+        <li>Use Sprites</li>
+        <li>Coloque o Javascript no fim</li>
+        <li>Coloque o CSS no topo</li>
+        <li>Adie o carregamento do que puder</li>
+        <li>Otimize o First-View</li>
+        <li>Use ferramentas de diagnóstico</li>
+      </ul>
+    </article>
+
+    <article id="o-que-fazer" class="bg">
+      <h2>Precisamos fazer algo rápido e que retorne valor.</h2>
+      <br><br><br>
+      <ul>
+        <li><a href="http://developer.yahoo.com/performance/rules.html#gzip" target="_blank">Habilite GZIP</a></li>
+        <li><a href="http://developer.yahoo.com/performance/rules.html#minify" target="_blank">Minifique Javascript/CSS</a></li>
+        <li>Junte arquivos Javascript/CSS</li>
+        <li>Comprima HTML</li>
+        <li>Javascript no fim</li>
+        <li>CSS no topo</li>
+        <li>Servir conteúdo estático sempre, <small>ex: Squid</small></li>
+      </ul>
+    </article>
+
+    <article id="o-que-fazer" class="bg">
+      <h2>O que conseguimos</h2>
+      <br/><br/><br/><br/>
+      <ul class="build">
+        <li class="to-build">De 36 requests para 28</li>
+        <li class="to-build">De 3MB para 287K</li>
+        <li class="to-build">De 7.5s para 4.3s</li>
+        <li class="to-build">
+          -3.3s no Peixe Urbano representa um aumento em receita de <strong>R$ 1.000.000,00</strong> por dia.
+        </li>
+        <li class="to-build">
+          Servir sempre o contéudo estático para o usuário, fazendo somente uma requisição ao banco em X min, reduzimos um custo de <strong>$16.000,00</strong> por dia em servidores.
+        </li>
+        <h3 class="to-build">É ae, performance importa???</h3>
+      </ul>
+    </article>
+
+    <article id="o-que-fazer" class="bg">
+      <h2>Próximos passos</h2>
+      <br/><br/><br/><br/>
+      <ul class="build">
+        <li class="to-build">OTIMIZAR ainda mais</li>
+        <li class="to-build">Uso de Apis HTML5/JS</li>
+        <li class="to-build">De 28 Requests para 10 Requests de arquivos estáticos</li>
+        <li class="to-build">Open Social API</li>
+      </ul>
+    </article>
+
+    <article id="github" class="bg"></article>
+
+    <article id="obrigado" class="bg">
+      <h3>giovanni.dossantos@peixeurbano.com</h3>
+    </article>
+
+  </section>
+</body>
+</html>
