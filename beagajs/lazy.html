@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lazy Load</title>
+	<style>
+		body {
+			text-align: center;
+		}
+		li {
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	<div class="global">
+		<h1>Exemplo Lazy Load</h1>
+		
+		<ul>
+			<li><img src="img.png" class="lazy" data-original="img-01.jpg"></li>
+			<li><img src="img.png" class="lazy" data-original="img-02.jpg"></li>
+			<li><img src="img.png" class="lazy" data-original="img-03.jpg"></li>
+			<li><img src="img.png" class="lazy" data-original="img-04.jpg"></li>
+			<li><img src="img.png" class="lazy" data-original="img-05.jpg"></li>
+			<li><img src="img.png" class="lazy" data-original="img-06.jpg"></li>
+			<li><img src="img.png" class="lazy" data-original="img-07.jpg"></li>
+			<li><img src="img.png" class="lazy" data-original="img-08.jpg"></li>
+			<li><img src="img.png" class="lazy" data-original="img-09.jpg"></li>
+			<li><img src="img.png" class="lazy" data-original="img-10.jpg"></li>
+		</ul>
+	</div>
+	
+	<script src="jquery.js"></script>
+	<script src="lazyload.js"></script>
+	<script>
+		$(".lazy").lazyload();
+	</script>
+</body>
+</html>
